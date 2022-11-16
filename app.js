@@ -65,7 +65,7 @@ app.use((error, req, res, next) => {
   });
 });
 
-const serverOn = app.listen(4001, () => {
+const serverOn = app.listen(process.env.PORT, () => {
   console.log(`Servidor corriendo en puerto ${serverOn.address().port}`);
 });
 
