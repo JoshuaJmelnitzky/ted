@@ -1,7 +1,10 @@
 export const renderIndex = (req, res) => {
-  if(!req.user) res.render("index");
-  let user = req.user.name;
-  res.render("index", {user});
+  if (req.user){
+    let user = req.user.name;
+    res.render("index", {user});
+  }else{
+    res.render("index");
+  }
 };  
 
 export const renderAbout = (req, res) => {
