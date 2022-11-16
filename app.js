@@ -70,4 +70,3 @@ const serverOn = app.listen(process.env.PORT || 4001, () => {
 });
 
 
-export default app;
