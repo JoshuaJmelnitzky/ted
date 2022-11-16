@@ -1,0 +1,67 @@
+<div class="conteiner fluid">
+  {{#if modulo1Id}}
+    <div class="row cards-container">
+      <h1>Modulo 1: Objetos y arrays</h1>
+      {{#each modulo1Id}}
+        <form action="/playground/{{this._id}}" method="GET">
+          <button class="card {{color}}">
+            <h2>Actividad {{this.id}}: {{this.title}}</h2>
+          </button>
+        </form>
+      
+      {{/each}}
+    </div>
+  {{/if}}
+
+
+  {{#if modulo2Id}}
+    <div class="row cards-container">
+      <h1>Modulo 2: Frontend</h1>
+      {{#each modulo2Id}}
+      
+        <form action="/playground/{{this._id}}" method="GET">
+          <button class="card {{color}}">
+            <h2>Actividad {{this.id}}: {{this.title}}</h2>
+          </button>
+        </form>
+      
+      {{/each}}
+    </div>
+  {{/if}}
+
+
+
+  {{#if modulo3Id}}
+    <div class="row cards-container">
+      <h1>Modulo 3: Optimización del proyecto</h1>
+      {{#each modulo3Id}}
+      
+        <form action="/playground/{{this._id}}" method="GET">
+          <button class="card {{color}}">
+            <h2>Actividad {{this.id}}: {{this.title}}</h2>
+          </button>
+        </form>
+      
+      {{/each}}
+    </div>
+  {{/if}}
+
+
+  {{#if modulo4Id}}
+    <div class="row cards-container">
+      <h1>Modulo 4: Asincronía y peticiones</h1>
+      {{#each modulo4Id}}
+
+        <form action="/playground/{{this._id}}" method="GET">
+          <button class="card {{color}}">
+            <h2>Actividad {{this.id}}: {{this.title}}</h2>
+          </button>
+        </form>
+
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
+
+
+

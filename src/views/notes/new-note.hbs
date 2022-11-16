@@ -1,0 +1,83 @@
+<div class="col-md-9 mx-auto">
+  <div class="card-nuevaActividad">
+    <div class="card-header bg-dark text-center">
+      <h3 class="text-white">Nueva Actividad</h3>
+    </div>
+    <div class="card-body text-center">
+      <form action="/notes/new-note" method="POST">
+        <div class="mb-3">
+          <label for="title">Titulo:</label>
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            placeholder="Titulo"
+            autofocus
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description">Tipo:</label>
+          <textarea
+            name="tipo"
+            class="form-control"
+            placeholder="Puede ser Individual o Grupal"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="description">Modulo:</label>
+          <textarea
+            name="modulo"
+            class="form-control"
+            placeholder="Puede ser de modulo 1, 2 o 3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="description">Enunciado:</label>
+          <textarea
+            name="enunciado"
+            class="form-control"
+            placeholder="Descripcion"
+            required
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="description">Parametros:</label>
+          <textarea
+            name="parametros"
+            class="form-control"
+            placeholder="Recuerda Separar por  , los parametros"
+            required
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="description">Solucion:</label>
+          <textarea
+            name="solucion"
+            class="form-control"
+            placeholder="Description"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="description">Ayuda:</label>
+          <textarea
+            name="ayuda"
+            class="form-control"
+            placeholder="Description"
+            required
+          ></textarea>
+        </div>
+        
+        <button class="btn btn-success w-100" type="submit">
+          Crear Actividad
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,142 @@
+{{!-- <section class="vh-100" style="background-color: #f4f5f7">
+  <div class="container py-5 h-90">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: 0.5rem">
+          <div class="row g-0">
+            <div class="col-md-4 text-center text-white" style="
+                border-top-left-radius: 0.5rem;
+                border-bottom-left-radius: 0.5rem;">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="Avatar"
+                class="img-fluid my-5" style="width: 80px" />
+              {{#if user}}
+              <li class="text-white navbar--name">Bienvenido {{name}}</li>
+              <h5 style="color:black">{{name}}</h5>
+              <p style="color:black">Estudiante</p>
+              <i class="far fa-edit mb-5"></i>
+              {{/if}}
+              <h5 style="color:black">{{Marie Horwitz}}</h5>
+              <p style="color:black">Estudiante</p>
+              <i class="far fa-edit mb-5"></i>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6>Informacion</h6>
+                <hr class="mt-0 mb-4" />
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Email</h6>
+                    <p class="text-muted">{{email}}</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Nombre</h6>
+                    <p class="text-muted">{{name}}</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Apellido</h6>
+                    <p class="text-muted">{{apellido}}</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Phone</h6>
+                    <p class="text-muted">123 456 789</p>
+                  </div>
+                </div>
+                <h6>Progress</h6>
+                <hr class="mt-0 mb-4" />
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+--}}
+
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div  class="col-xl-6 col-md-12">
+        <div class="cards user-card-full">
+          <div class="row m-l-0 m-r-0">
+            <div class="col-sm-4 bg-c-lite-green user-profile">
+
+              <div class="card-block text-center text-white">
+                <div class="m-b-25">
+                  <img style="width:200px; "
+                    src="https://cdn.icon-icons.com/icons2/2859/PNG/512/avatar_face_man_boy_profile_smiley_happy_people_icon_181659.png"
+                    class="img-radius" alt="User-Profile-Image">
+                </div>
+                <h3 style="color:white" class="f-w-600">{{name}}</h3>
+                <br>
+                <h3>Web Designer</h3>
+                <br>
+                <h4>Estudiante</h4>
+                <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+              </div>
+
+            </div>
+            <div class="col-sm-8">
+              <div class="card-block">
+                <h3 class="m-b-20 p-b-5 b-b-default f-w-600 ">Informacion</h3>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Nombre</p>
+                    <h3 class="text-muted f-w-400">{{name}}</h3>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Apellido</p>
+                    <h3 class="text-muted f-w-400">{{apellido}}</h3>
+                  </div>
+                </div>
+                <h3 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Contacto</h3>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Email</p>
+                    <h3 class="text-muted f-w-400">{{email}}</h3>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="m-b-10 f-w-600">Fecha Nacimiento</p>
+                    <h3 class="text-muted f-w-400">{{fechaf}}</h3>
+                  </div>
+                </div>
+                <h3>Progreso de Curso</h3>
+                <hr class="mt-0 mb-4" />
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 100%;background-color:#f29263" aria-valuenow="50" aria-valuemin="0"
+                    aria-valuemax="100">
+                  </div>
+                </div>
+                <ul style="text-align: center;" class="social-link list-unstyled m-t-40 m-b-10">
+                  <li><a class="btn btn-outline-dark  btn-floating" href="#!" role="button">
+                      <i class="fab fa-facebook-f"></i>
+                    </a></li>
+                  <li><a class="btn btn-outline-dark  btn-floating" href="#!" role="button">
+                      <i class="fab fa-twitter"></i>
+                    </a></li>
+                  <li><a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                      <i class="fab fa-google"></i>
+                    </a></li>
+                  <li><a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                      <i class="fab fa-instagram"></i>
+                    </a></li>
+                  <li><a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a></li>
+                  <li><a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                      <i class="fab fa-github"></i>
+                    </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

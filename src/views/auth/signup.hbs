@@ -1,0 +1,77 @@
+
+<div class="registration-form">
+        <form action="/auth/signup" method="POST">
+            <div class="mb-3">
+            <label for="name">Nombre:</label>
+            <input
+              type="text"
+              class="form-control item"
+              name="name"
+              placeholder="Name"
+              value="{{name}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="name">Apellido:</label>
+            <input
+              type="text"
+              class="form-control item"
+              name="apellido"
+              placeholder="Apellido"
+              value="{{apellido}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control item"
+              name="email"
+              placeholder="Email"
+              value="{{email}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              class="form-control item"
+              name="password"
+              placeholder="Password"
+              value="{{password}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="confirm_password">Cofirmar Contraseña:</label>
+            <input
+              type="password"
+              class="form-control item"
+              name="confirm_password"
+              placeholder="Confirm Password"
+              value="{{confirm_password}}"
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirm_password">Fecha Nacimiento</label>
+                <input type="date" class="form-control item" name="fechaN" placeholder="Birth Date">
+            </div>
+          <button class="btn btn-block create-account">
+            Crear cuenta
+          </button>
+        </form>
+        <div class="social-media">
+            <h5>Registrarse con redes sociales</h5>
+            <div class="social-icons">
+                <a href="#!" role="button">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                <a  href="#!" role="button">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                <a  href="#!" role="button">
+                      <i class="fab fa-google"></i>
+                    </a>
+    
+            </div>
+        </div>
+    </div>

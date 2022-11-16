@@ -1,0 +1,133 @@
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.css'>
+
+<div class="container-fluid playground--padding">
+    <div class="row playground__center">
+
+        <div class="sidebar close">
+         
+            <ul class="nav-links">
+                {{#each getActividadesConId}}
+                    <li>
+                        <a href="/playground/{{_id}}">
+                            <i class='bx bx-grid-alt' ></i>
+                            <span class="link_name">Actividad {{this.id}}</span>
+                        </a>
+                    </li>
+                {{/each}}
+
+            </ul>
+        </div>
+
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu' ></i>
+                <span class="text">Actividades</span>
+            </div>
+
+            <div class="col-md-9 playground__solution--padding">
+       
+                <h1>{{this.title}}</h1>
+                <div class="mt-5 mb-5">
+                    <h3>{{this.enunciado}}</h3>
+                </div>
+
+                
+                <div class="grid-container">
+                    <div class="code-area code-area-console">
+                        <div class="code-area-header">
+                            <h1>Editor</h1>
+                            <button id="console">Ejecutar</button>
+                        </div>
+                        <form action="/playground/{{this.idActividad}}" method="post">
+                            <textarea name="solution" class="codemirror-textarea">{{this.solution}}</textarea>
+                            <button>Enviar solucion</button>
+                        </form>                   
+                    </div>
+
+
+                    <div class="code-area">
+                        <div class="code-area-header">
+                            <h1>Shell</h1>
+                            <button id="shell">Limpiar</button>
+                        </div>
+                        <textarea class="codemirror-textarea"></textarea>
+                    </div>
+                </div>
+
+                {{#if feedbackOk}}
+                    <div class="feedback feedback-ok">
+                        <h3>{{feedbackOk}}</h3>
+                    </div>           
+                {{/if}}
+
+                {{#if feedbackFail}}
+                    <div class="feedback feedback-fail">
+                        <h3>{{feedbackFail}}</h3>
+                    </div>
+                {{/if}}
+
+                {{#if feedbackError}}
+                    <div class="feedback feedback-error">
+                       <h3>{{feedbackError}}</h3>
+                    </div>
+                
+                {{/if}}
+            </div>
+        </section>
+    </div>
+</div> 
+    
+
+
+
+
+    
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/xml/xml.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/css/css.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/htmlmixed/htmlmixed.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/addon/edit/matchbrackets.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/addon/edit/closebrackets.js'></script>
+
+<script>
+
+    let arrow = document.querySelectorAll(".arrow");
+	for (var i = 0; i < arrow.length; i++) {
+		arrow[i].addEventListener("click", (e)=>{
+	let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+	arrowParent.classList.toggle("showMenu");
+		});
+	}
+	let sidebar = document.querySelector(".sidebar");
+	let sidebarBtn = document.querySelector(".bx-menu");
+	console.log(sidebarBtn);
+	sidebarBtn.addEventListener("click", ()=>{
+		sidebar.classList.toggle("close");
+	});
+
+
+    var console = document.querySelector('#console');
+    var ejecute = document.querySelector('#shell');
+
+    const [input, output] = document.querySelectorAll(".codemirror-textarea");
+    const [run, clear] = document.querySelectorAll('button');
+
+    const editor = CodeMirror.fromTextArea(input, {lineNumbers:true, mode: 'javascript', matchBrackets: false, autoCloseBrackets: true,});
+    const shell = CodeMirror.fromTextArea(output, {lineNumbers:false, mode: 'javascript'});
+    
+    console.addEventListener("click", () => {
+        const codeToRun = editor.getValue();
+        try{
+            shell.replaceRange('  $ ' + eval(`${codeToRun}`) + "\n", CodeMirror.Pos(shell.lastLine()));
+        }catch(e){
+            shell.replaceRange('  $ ' + e + "\n", CodeMirror.Pos(shell.lastLine()));
+        }
+    });
+
+    ejecute.addEventListener("click", () => shell.setValue(""));       
+    
+</script>
+

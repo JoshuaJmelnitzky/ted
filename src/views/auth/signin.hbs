@@ -1,0 +1,44 @@
+
+<div class="registration-form">
+        <form action="/auth/signin" method="POST">
+          <div class="mb-3">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control item"
+              name="email"
+              placeholder="Email"
+              autofocus
+            />
+          </div>
+          <div class="mb-3">
+            <label for="passswore">Password:</label>
+            <input
+              type="password"
+              class="form-control item"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+          <button class="btn btn-block create-account">
+            Ingresar
+          </button>
+        </form>
+        <div class="social-media">
+          <div class="social-icons">
+                <a href="#!" role="button">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                <a  href="#!" role="button">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                <a  href="#!" role="button">
+                      <i class="fab fa-google"></i>
+                    </a>
+                {{!-- <a href="#"><i class="icon-social-google" title="Google"></i></a>
+                <a href="#"><i class="icon-social-twitter" title="Twitter"></i></a> --}}
+            </div>
+                        <p class="text-center">No estas Registrado? <a href="/auth/signup" class="text-info">Register</a></p>
+
+        </div>
+    </div>

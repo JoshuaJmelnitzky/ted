@@ -1,0 +1,56 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="color:707070">
+        <a class="navbar-brand" href="/">Programing JS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText" style="">
+            <ul class="navbar-nav ml-auto navbar-width">
+                <li class="nav-item">
+                    <a class="btn btn-dark btn-lg" href="/actividades">Actividades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-dark btn-lg" href="/perfil">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-dark btn-lg" href="/playground">Entorno de pruebas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-dark btn-lg" href="/notes/add">Crear Actividad</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn btn-dark btn-lg" href="/ranking">Ranking</a>
+                </li>
+
+
+                <div class="navbar-signlogin">
+                    <li class="nav-item" id="hiddenSignUp">
+                        <a class="btn btn-dark btn-lg" href="/auth/signin">Login</a>
+                    </li> 
+
+                    <li class="nav-item" id="hidden">
+                        <a class="btn btn-dark btn-lg" href="/auth/signup">Register</a>
+                    </li>
+                </div>
+      
+
+                {{#if user}}
+                    <li class="text-white navbar--name">Bienvenido {{user}}</li>
+
+                    <li class="nav-item">
+                        <a class="btn btn-dark btn-lg" href="/auth/logout">Desloguearse</a>
+                    </li> 
+
+                    <script>
+                        const buttonHiddenSignUp = document.getElementById('hiddenSignUp'); 
+                        buttonHiddenSignUp.style.display = 'none';
+
+                        const buttonHidden = document.getElementById('hidden'); 
+                        buttonHidden.style.display = 'none';
+                    </script>
+                {{/if}}     
+            </ul>
+        </div>
+    </nav>
+</header>

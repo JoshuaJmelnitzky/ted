@@ -1,0 +1,29 @@
+<div class="container" style=" margin: auto;
+	padding: auto;
+	text-align: center;
+	width: 400px;">
+  <div style="font-size:30px; margin-top:30px;">Crear Preguntas</div>
+    <p>Las Activiades se pueden generar de manera Individual o Grupal </p>
+  {{!-- <div class="actividad">Actividad Grupal</div> --}}
+    <a href="/actividades/nuevaActividad" class="btn btn-success btn-block p-4">Actividad Grupal</a>
+
+    <p>Descripcion: se podra crear una
+        actividad con un minimo de 2 
+        estudiantes</p>
+  {{!-- <div class="actividad">Actividad Individual</div> --}}
+  <a href="/actividades/nuevaActividad" class="btn btn-success btn-block p-4">Actividad Individual</a>
+  <p>Descripcion:Afecta a todos los
+estudiantes </p>
+</div>
+
+<style>
+    .actividad{
+        font-size: 40px;
+        margin-top: 30px;
+        background-color: rgb(129, 129, 129);
+        border-radius: 10px;
+    }
+    p{
+	font-size: 20px;
+}
+</style>
