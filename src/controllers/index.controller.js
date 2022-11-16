@@ -1,5 +1,5 @@
 export const renderIndex = (req, res) => {
-  if(!user) res.render("index");
+  if(!req.user.name) res.render("index");
   let user = req.user.name;
   res.render("index", {user});
 };
