@@ -6,6 +6,7 @@ import passport from "passport";
 import MongoStore from "connect-mongo";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
+
 import { MONGODB_URI, PORT } from "./src/config/config.js";
 
 import indexRoutes from "./src/routes/index.routes.js"; 
@@ -18,7 +19,6 @@ const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // settings
-app.set("port", PORT);
 app.set("views", join(__dirname, "/src/views"));
 
 // config view engine
@@ -64,5 +64,10 @@ app.use((error, req, res, next) => {
     error,
   });
 });
+
+const serverOn = app.listen(process.env.PORT  || 4001, () => {
+  console.log(`Servidor corriendo en puerto ${serverOn.address().port}`);
+});
+
 
 export default app;
