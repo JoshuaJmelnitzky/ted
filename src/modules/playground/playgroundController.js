@@ -15,9 +15,9 @@ export const playground  = async (req, res) => {
     const getActividades = await activitiesService.getActividades();
     let getActividadesConId = getActividades.map((act, index) => Object.assign({}, act, {id: index + 1}));
 
-    const { title, enunciado } = actividad;
+    const { title, enunciado, ayuda } = actividad;
 
-    res.render('playground', {title, enunciado, idActividad, getActividadesConId, user});
+    res.render('playground', {title, enunciado, idActividad, getActividadesConId, user, ayuda});
 };
 
 

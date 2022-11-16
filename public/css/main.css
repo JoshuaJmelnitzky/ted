@@ -1050,4 +1050,26 @@ border-radius: 20px;
   }
 }
 
+.img-ayuda{
+  width: 90px;
+}
 
+.collapse-help p{
+  font-size: 20px;
+}
+
+.index-dirigido{
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+
+.index-dirigido div{
+  padding: 8px;
+}
+
+.index-dirigido-container{
+  display: flex;
+  justify-content: center;
+}
