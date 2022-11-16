@@ -6,12 +6,12 @@ import passport from "passport";
 import MongoStore from "connect-mongo";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-import { MONGODB_URI, PORT } from "./config/config.js";
+import { MONGODB_URI, PORT } from "./src/config/config.js";
 
-import indexRoutes from "./routes/index.routes.js"; 
-import notesRoutes from "./routes/notes.routes.js";
-import userRoutes from "./routes/auth.routes.js";
-import "./config/passport.js";
+import indexRoutes from "./src/routes/index.routes.js"; 
+import notesRoutes from "./src/routes/notes.routes.js";
+import userRoutes from "./src/routes/auth.routes.js";
+import "./src/config/passport.js";
 
 // Initializations
 const app = express();
@@ -19,7 +19,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // settings
 app.set("port", PORT);
-app.set("views", join(__dirname, "views"));
+app.set("views", join(__dirname, "/src/views"));
 
 // config view engine
 const hbs = exphbs.create({
